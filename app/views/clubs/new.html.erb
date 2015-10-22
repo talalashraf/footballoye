@@ -1,0 +1,41 @@
+<h1>Club#new</h1>
+<p>Find me in app/views/club/new.html.erb</p>
+
+
+<%= form_for(@club) do |club| %>
+	<% if @club.errors.any? %>
+	<div id="error_explanation">
+		<h2> <%= pluralize(@club.errors.count, "error") %> prohibited this article from being saved</h2>
+
+		<ul>
+			<% @club.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+
+	<div class="field">
+		<%= club.label :name %><br>
+		<%= club.text_field :name %>
+	</div>
+	<div class="field">
+		<%= club.label :nickname %><br>
+		<%= club.text_field :nickname %>
+	</div>
+	<div class="field">
+		<%= club.label :league %><br>
+		<%= club.text_field :league %>
+	</div>
+	<div class="field">
+		<%= club.label :info %><br>
+		<%= club.text_field :info %>
+	</div>
+	<div class="field">
+		<%= club.label :slug %><br>
+		<%= club.text_field :slug %>
+	</div>
+	<div class="actions">
+    	<%= club.submit %>
+  	</div>
+<% end %>

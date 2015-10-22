@@ -1,0 +1,540 @@
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+/*
+ *
+ * Testing this. Useable with only desktop devices
+.dropdown .dropdown-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition:         all 0.2s  ease;
+  -moz-transition:    all 0.2s  ease;
+  -webkit-transition: all 0.2s  ease;
+  -o-transition:      all 0.2s  ease;
+  -ms-transition:     all 0.2s  ease;
+}
+.dropdown:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown {
+  display: inline-block;
+}
+*/
+
+
+/*
+ *
+ * Also testing. has trouble adjusting to mobile views
+.open > .dropdown-menu {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);  
+  
+}
+.open > .dropdown-menu li a {
+  color: #000;  
+}
+.dropdown-menu li a{
+  color: #fff;
+}
+.dropdown-menu {
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  -webkit-animation-fill-mode: forwards;  
+  animation-fill-mode: forwards; 
+  -webkit-transform: scale(1, 0);
+  display: block;
+  
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+}
+.dropup .dropdown-menu {
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;  
+}
+
+.navbar .nav > li > .dropdown-menu:after {
+
+}
+.dropup > .dropdown-menu:after {
+  border-bottom: 0;
+  border-top: 6px solid rgba(39, 45, 51, 0.9);
+  top: auto;
+  display: inline-block;
+  bottom: -6px;
+  content: '';
+  position: absolute;
+  left: 50%;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+ *
+ *
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	background-color: #F8F5F2;
+  overflow: hidden;
+}
+.logoleft {
+	font-family: 'Pacifico', cursive;
+	font-size: 30px;
+	color: #fff;
+}
+
+.logoleft a {
+	color: #fff;
+  font-size: 30px;
+}
+
+.menubar {
+	font-family: 'Cinzel', serif;
+	font-size: 14px;
+}
+
+.navbar {
+	min-height: 60px;
+}
+
+body { 
+	padding-top: 60px; 
+}
+
+
+.subclass{
+	display: inline-block;
+	position: absolute;
+}
+
+.subclass li {
+	float: left;
+}
+
+.subclass a {
+	display: block;
+	width: 100px;
+}
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	height: 8%;
+	display: block;
+}
+
+.footer {
+	height: 3%;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background-color: #D70026;
+	display: block;
+  text-align: right;
+  color: #EDB83D;
+}
+
+.footer p {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  vertical-align: center;
+}
+
+.jumbotron {
+  background-image: url(http://images.wikia.com/the-football-database/images/4/45/Dark_green_grass_texture-other.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #CBCBCB;
+  min-height: 200px;
+}
+
+.jumbotron h1, .jumbotron h2 {
+	color: #EEE;
+	font-family: 'Cinzel', serif;
+	font-style: bolder;
+	text-align: center;
+}
+
+.black-and-white {
+	-webkit-filter: grayscale(100%);
+}
+
+.sepia {
+	-webkit-filter: sepia(100%);
+}
+
+.war, .love {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+
+
+.blur {
+	-webkit-filter: blur(3px);
+}
+
+.bright {
+  -webkit-filter: brightness(50%);
+}
+
+.loginbutton {
+	text-align: center;
+}
+
+.maincontent{
+  display: block;
+  position: relative;
+	height: 400px;
+	width: 100%;
+	width: auto;
+	overflow: scroll;
+  background:transparent;
+}
+
+.maincontent a, .maincontent h1 {
+  color: #000B29;
+}
+
+/*Personal settings for navbar coloring. */
+
+.navbar-personal {
+  background-color: #D70026;
+  border-color: #000B29;
+}
+.navbar-personal .navbar-brand {
+  color: #fff;
+}
+.navbar-personal .navbar-brand:hover,
+.navbar-personal .navbar-brand:focus {
+  color: #EDB83D;
+  background-color: transparent;
+}
+.navbar-personal .navbar-text {
+  color: #fff;
+}
+.navbar-personal .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-personal .navbar-nav > li > a:hover,
+.navbar-personal .navbar-nav > li > a:focus {
+  color: #EDB83D;
+  background-color: transparent;
+}
+.navbar-personal .navbar-nav > .active > a,
+.navbar-personal .navbar-nav > .active > a:hover,
+.navbar-personal .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #000B29;
+}
+.navbar-personal .navbar-nav > .disabled > a,
+.navbar-personal .navbar-nav > .disabled > a:hover,
+.navbar-personal .navbar-nav > .disabled > a:focus {
+  color: #444;
+  background-color: transparent;
+}
+.navbar-personal .navbar-toggle {
+  border-color: #333;
+}
+.navbar-personal .navbar-toggle:hover,
+.navbar-personal .navbar-toggle:focus {
+  background-color: #333;
+}
+.navbar-personal .navbar-toggle .icon-bar {
+  background-color: #EDB83D;
+}
+.navbar-personal .navbar-collapse,
+.navbar-personal .navbar-form {
+  border-color: #101010;
+}
+.navbar-personal .navbar-nav > .open > a,
+.navbar-personal .navbar-nav > .open > a:hover,
+.navbar-personal .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #000B29;
+}
+@media (max-width: 767px) {
+  .navbar-personal .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #000B29;
+  }
+  .navbar-personal .navbar-nav .open .dropdown-menu .divider {
+    background-color: #000B29;
+  }
+  .navbar-personal .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+  }
+  .navbar-personal .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-personal .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #EDB83D;
+    background-color: transparent;
+  }
+  .navbar-personal .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-personal .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-personal .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #000B29;
+  }
+  .navbar-personal .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-personal .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-personal .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #444;
+    background-color: transparent;
+  }
+}
+.navbar-personal .navbar-link {
+  color: #9d9d9d;
+}
+.navbar-personal .navbar-link:hover {
+  color: #EDB83D;
+}
+.navbar-personal .btn-link {
+  color: #9d9d9d;
+}
+.navbar-personal .btn-link:hover,
+.navbar-personal .btn-link:focus {
+  color: #fff;
+}
+.navbar-personal .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-personal .btn-link:hover,
+.navbar-personal .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-personal .btn-link:focus {
+  color: #444;
+}
+
+
+/*Story teller code goes here */
+
+.stories {
+  overflow: scroll;
+  height: 90%;
+}
+.storyteller {
+  padding:;
+  border-top-style: solid;
+  border-left-style: none;
+  border-width: 2px 0px 0px 0px;
+  border-radius: 0px 0px 0px 0px;
+  margin-bottom: 20px;
+}
+.story-full {
+  text-align: justify;
+}
+.author {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.2);
+}
+.author h4 {
+  font-size: 12px;
+  text-align: center;
+}
+
+.author p{
+  font-size: 10px;
+  text-align: center;
+}
+
+.author-full {
+  display: block;
+}
+
+.author-full h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.author-full p {
+  font-size: 12px;
+}
+
+.author-right {
+  float: right;
+  margin: 1px 0px 1px 10px;
+}
+
+.author-left {
+  float: left;
+  margin: 1px 10px 1px 0px;
+}
+
+.author-picture img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  }
+
+.author-text-full-story {
+  margin: 10px 10px 10px 10px;
+  float: right;
+}
+
+.author-picture-full-story {
+  margin: 10px 10px 10px 10px;
+  float: left;
+}
+
+.author-picture-full-story img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+}
+
+.story-image-container img {
+  overflow: hidden;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: inherit;
+  max-height: 50%;
+  max-width: 95%;
+  margin-bottom: 50px;
+}
+.story-image-75 {
+  display: block;
+  max-width: 75%;
+  min-width: 250px;
+  max-height: 100%;
+}
+.story-image-50 {
+  display: block;
+  max-width: 50%;
+  min-width: 250px;
+  max-height: 100%;
+}
+
+.story-image-100 {
+  display: block;
+  width: 100%;
+  max-height: 95%;
+  margin: 20px 0px 20px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.story-image-right {
+  float: right;
+  margin: 20px 0px 20px 20px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.story-image-left {
+  float: left;
+  margin: 20px 20px 20px 0px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.story-image-center {
+  float: center;
+  margin: 20px 20px 20px 20px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+@media (min-width: 200px) and (max-width: 992px) {
+  .story-image-mobile {
+    display: block;
+    min-width: 100%;
+    max-height: 95%;
+    margin: 20px 0px 20px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px 0px 0px 0px;
+  }
+  .author-mobile {
+    float: none;
+    width: 50%;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .author-mobile .author-text-full-story {
+    float: none;
+  }
+  .author-mobile .author-picture-full-story {
+    display: block;
+    text-align: center;
+    float: none;
+
+  }
+  .author-mobile .author-picture-full-story img {
+    margin: 10px 10px 10px 10px;
+  }
+}
+
+.story-excerpt {
+  font-family: 'Cinzel', serif;
+  text-align: justify;
+}
+
+ .author-name, .club-affil, .story-brief{
+  font-family: 'Cinzel', serif;
+  text-align: center;
+}
+
+.story-brief .story-title {
+  font-weight: bolder;
+}
+
+.retaliation {
+  clear: left;
+  font-size: 11px;
+  margin: 10px 0px 10px 0px;
+}
+/*Fixtures frames go here */
+.fixtures-frame {
+  height: 85%;
+}
+
+
+/*fixtures styles go here */
+
+table, table th {
+  font-size: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+table th, table tr, table td {
+  border-style: solid;
+  border-width: 1px;
+}
+
+table {
+  border-style: solid;
+  border-width: 1px;
+}
+
+
