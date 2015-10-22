@@ -16,11 +16,31 @@ class ClubsController < ApplicationController
       end
     end
   end
+
   def show
   	set_club
   end
 
+  def edit
+    set_club
+  end
+
+  def update
+    set_club
+    respond_to do |format|
+      if @club.update(club_params)
+        format.html { redirect_to @club, notice: 'Club was successfully updated.' }
+        format.json { render :show, status: :ok, location: @club }
+      else
+        format.html { render :edit }
+        format.json { render json: @club.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
   private
+
   def set_club
   	@club = Club.find_by_slug(params[:id])
   end

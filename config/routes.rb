@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  get 'clubs/edit'
+
   get 'clubs/new'
 
   get 'clubs/show'
 
-  get 'club/new'
 
   get 'magazine/index' => 'magazine#index'
 

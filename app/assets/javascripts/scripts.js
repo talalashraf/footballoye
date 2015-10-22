@@ -7,14 +7,18 @@ $(document).ready(setInterval(gameOn, 2500));
 
 $(document).ready(function(){
 	$("#clubs").on('show.bs.dropdown', function(){
-		$("#stories").removeClass("active");
+		$("#magazine").removeClass("active");
 		$("#home").removeClass("active");
 	});
 	$("#clubs").on('hidden.bs.dropdown', function(){
-		if ($('title').text() === "Stories @ Football Oye!"){
-			$("#stories").addClass("active");
+		if ($('title').text() === "The Football Oye! Magazine"){
+			$("#magazine").addClass("active");
 		}
 		else
 			$("#home").addClass("active");
 	});
+});
+
+$('.ckeditor').ckeditor({
+  // optional config
 });

@@ -1,13 +1,11 @@
-<script>
-	$('li').removeClass('active');
-	$('#clubs').addClass('active');
-</script>
+<div class="container">
+	<script>
+		$('li').removeClass('active');
+		$('#clubs').addClass('active');
+	</script>
+	<h1> Hello Fans of <%= @club.name %> </h1>
 
-<h1>Clubs#show</h1>
-<p>Find me in app/views/clubs/show.html.erb</p>
+	<p>We are also known as <%= @club.nickname %> and play in the <%= @club.league %>.</p>
 
-<h1> Hello Fans of <%= @club.name %> </h1>
-
-<p>We are also known as <%= @club.nickname %> and play in the <%= @club.league %>.</p>
-
-<p><%= @club.info.html_safe %></p>
+	<p><%= @club.info.html_safe %></p>
+</div>

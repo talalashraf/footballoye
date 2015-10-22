@@ -11,27 +11,13 @@
 			</ul>
 		</div>
 		<% end %>
-
-		<div class="field">
-			<%= club.label :name %><br>
-			<%= club.text_field :name %>
-		</div>
-		<div class="field">
-			<%= club.label :nickname %><br>
-			<%= club.text_field :nickname %>
-		</div>
-		<div class="field">
-			<%= club.label :league %><br>
-			<%= club.text_field :league %>
-		</div>
-		<div class="field">
+		<h1>Editting page for <%= @club.name %></h1>
+		
+		<div class="field" data-no-turbolink>
 			<%= club.label :info %><br>
-			<%= club.text_field :info %>
+			<%= club.text_area :info, :class => 'ckeditor' %>
 		</div>
-		<div class="field">
-			<%= club.label :slug %><br>
-			<%= club.text_field :slug %>
-		</div>
+
 		<div class="actions">
 	    	<%= club.submit %>
 	  	</div>

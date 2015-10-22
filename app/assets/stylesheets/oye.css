@@ -101,7 +101,7 @@ body {
 }
 .logoleft {
 	font-family: 'Pacifico', cursive;
-	font-size: 30px;
+	font-size: 28px;
 	color: #fff;
 }
 
@@ -116,13 +116,16 @@ body {
 }
 
 .navbar {
-	min-height: 60px;
+	min-height: 50px;
 }
+
+
+/* Why is this here ?
 
 body { 
 	padding-top: 60px; 
 }
-
+*/
 
 .subclass{
 	display: inline-block;
@@ -169,6 +172,7 @@ body {
   background-size: cover;
   background-color: #CBCBCB;
   min-height: 200px;
+  margin-top: -12px;
 }
 
 .jumbotron h1, .jumbotron h2 {
@@ -226,7 +230,6 @@ body {
 
 .navbar-personal {
   background-color: #D70026;
-  border-color: #000B29;
 }
 .navbar-personal .navbar-brand {
   color: #fff;
