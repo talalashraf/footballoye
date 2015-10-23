@@ -6,10 +6,14 @@
 
 <div class="container jumbotron">
 	<div class="jumbotron-background">
-		<h1 class="war">Glorifying the battle is romance with the war!</h1>
-		<h2 class="love blur">You need to love the game to be here.</h2>
-		<div class="loginbutton">
-			<button class="btn btn-primary btn-lg center">Log In with Facebook</button>
-		</div>
+		
+		<% if user_signed_in? %>
+			<h1>Welcome to Football Oye! <%= current_user.first_name %> </h1>
+			<h2>Keep loving the game</h2><br>
+			<img class="mini-image" src="<%=current_user.display_pic %>?type=large">
+		<% else %>
+			<h1 class="war">Glorifying the battle is romance with the war!</h1>
+			<h2 class="love blur">You need to love the game to be here.</h2>
+		<% end %>
 	</div>
 </div>

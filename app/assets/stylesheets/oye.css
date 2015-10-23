@@ -115,6 +115,13 @@ body {
 	font-size: 14px;
 }
 
+.mini-image {
+  max-height: 150px;
+  border-radius: 75px 75px 75px 75px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
 .navbar {
 	min-height: 50px;
 }
@@ -539,5 +546,4 @@ table {
   border-style: solid;
   border-width: 1px;
 }
-
 

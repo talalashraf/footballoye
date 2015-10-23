@@ -43,7 +43,7 @@ class ClubsController < ApplicationController
   def all_clubs
     @allclubs = Club.all
   end
-  
+
   def set_club
   	@club = Club.find_by_slug(params[:id])
   end

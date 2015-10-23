@@ -36,10 +36,10 @@
 					<li id="home"><a href=<%=root_path%>>Home</a></li>
 					<li id="magazine"><a href=<%=magazine_index_path%>>Magazine</a></li>
 					<li id="clubs" class="dropdown">
-					<a  class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-						Clubs
-						<span class="caret"></span>
-					</a>
+						<a  class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+							Clubs
+							<span class="caret"></span>
+						</a>
 						<ul class="dropdown-menu" aria-labelledby="fixtures">
 							<li><a href="/clubs/ManchesterUnited">Manchester United</a></li>
 							<li><a href="/clubs/Liverpool">Liverpool</a></li>
@@ -53,10 +53,19 @@
 					<li><a href="#">Merchandize</a></li>
 					<li><a href="#">The Team</a></li>
 					<% if admin_signed_in? %>
-					
-					<li><%= link_to('<span class="glyphicon glyphicon-log-out"></span>Logout'.html_safe, destroy_admin_session_path, :method => :delete) %> </li>
+					<li><%= link_to('Logout   <span class="glyphicon glyphicon-log-out"></span>'.html_safe, destroy_admin_session_path, :method => :delete) %> </li>
+					<% elsif user_signed_in? %>
+					<li id="user" class="dropdown">
+						<a  class="dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+							<%= current_user.first_name %>
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="fixtures">
+							<li><%= link_to('Logout   <span class="glyphicon glyphicon-log-out"></span>'.html_safe, destroy_user_session_path, :method => :delete) %> </li>
+						</ul>
+					</li>
 					<% else %>
-					<li><a>Login <span class="glyphicon glyphicon-log-in"></span></a></li>
+					<li><%= link_to('Login   <span class="glyphicon glyphicon-log-in"></span>'.html_safe, user_omniauth_authorize_path(:facebook)) %> </li>
 					<% end %>
 					
 				</ul>

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-  devise_for :admins, controllers: { sessions: "admins/sessions", registrations: "admins/registrations" }
+  
+  devise_for :admins,  controllers: { sessions: "admins/sessions", 
+                                    registrations: "admins/registrations" }
   get 'clubs/edit'
 
   get 'clubs/new'
@@ -17,8 +18,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#homepage'
   resources :clubs
-
-
+  #  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, controllers: { #sessions: "users/sessions", 
+                                    #registrations: "users/registrations", 
+                                   omniauth_callbacks: "users/omniauth_callbacks" }
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
