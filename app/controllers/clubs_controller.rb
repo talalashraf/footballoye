@@ -1,5 +1,5 @@
 class ClubsController < ApplicationController
-  
+  before_action :authenticate_admin!, only: [:create, :edit, :update]
   def new
   	@club = Club.new
   end
@@ -40,7 +40,10 @@ class ClubsController < ApplicationController
 
 
   private
-
+  def all_clubs
+    @allclubs = Club.all
+  end
+  
   def set_club
   	@club = Club.find_by_slug(params[:id])
   end

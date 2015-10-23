@@ -3,6 +3,10 @@
 		$('li').removeClass('active');
 		$('#clubs').addClass('active');
 	</script>
+	<% if admin_signed_in? %>
+	<%= link_to "Edit Page", {controller: "clubs", action: "edit"} %>
+	<% end %>
+
 	<h1> Hello Fans of <%= @club.name %> </h1>
 
 	<p>We are also known as <%= @club.nickname %> and play in the <%= @club.league %>.</p>

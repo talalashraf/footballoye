@@ -52,8 +52,13 @@
 					</li>
 					<li><a href="#">Merchandize</a></li>
 					<li><a href="#">The Team</a></li>
+					<% if admin_signed_in? %>
+					
+					<li><%= link_to('<span class="glyphicon glyphicon-log-out"></span>Logout'.html_safe, destroy_admin_session_path, :method => :delete) %> </li>
+					<% else %>
 					<li><a>Login <span class="glyphicon glyphicon-log-in"></span></a></li>
-					<li><a>Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
+					<% end %>
+					
 				</ul>
 			</div>
 		</div>
